@@ -23,22 +23,22 @@ export const Countdowntimer = ({
 			<TimeUnit
 				label="DAYS"
 				value={count_down.days}
-				current_framework={current_framework}
+				currentFramework={current_framework}
 			/>
 			<TimeUnit
 				label="HOURS"
 				value={count_down.hours}
-				current_framework={current_framework}
+				currentFramework={current_framework}
 			/>
 			<TimeUnit
 				label="MINUTES"
 				value={count_down.minutes}
-				current_framework={current_framework}
+				currentFramework={current_framework}
 			/>
 			<TimeUnit
 				label="SECONDS"
 				value={count_down.seconds}
-				current_framework={current_framework}
+				currentFramework={current_framework}
 			/>
 		</div>
 	);
