@@ -1,7 +1,6 @@
 import { calculate_time_to_event } from "@/utils/countdown-utils";
 import { type Framework } from "@/utils/framework-utils";
 import { useState, useEffect } from "react";
-import { clearInterval } from "timers";
 import { TimeUnit } from "./time-unit";
 
 export const Countdowntimer = ({
@@ -12,11 +11,11 @@ export const Countdowntimer = ({
 	const [count_down, set_count_down] = useState(calculate_time_to_event());
 
 	useEffect(() => {
-		const interval_id = setInterval(() => {
+		const Interval = setInterval(() => {
 			set_count_down(calculate_time_to_event());
 		}, 1000);
 
-		return () => clearInterval(interval_id);
+		return () => clearInterval(Interval);
 	}, []);
 
 	return (

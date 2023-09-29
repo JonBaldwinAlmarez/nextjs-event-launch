@@ -4,31 +4,30 @@ import { NumberRotation } from "./number-rotation";
 export const TimeUnit = ({
 	label,
 	value,
-	current_framework,
+	currentFramework,
 }: {
 	label: string;
 	value: number;
-	current_framework: string;
-}) => {
-	return (
-		<div className="flec flex-col">
-			<div className="text-white text-3xl font-semibold">{value}</div>
+	currentFramework: string;
+}) => (
+	<div className="flex flex-col">
+		<div className="text-white text-3xl font-semibold">
 			<NumberRotation number={value} />
-			<div
-				className={cn("text-[8px] font-medium", {
-					"bg-purple-300": current_framework === "qwik",
-					"bg-sky-300": current_framework === "safari",
-					"bg-yellow-300": current_framework === "chrome",
-					"bg-teal-300": current_framework === "tailwind",
-					"bg-blue-300": current_framework === "react",
-					"bg-green-300": current_framework === "vue",
-					"bg-orange-400": current_framework === "svelte",
-					"bg-red-300": current_framework === "mobile",
-					"bg-neutral-300": current_framework === "desktop",
-				})}
-			>
-				{label}
-			</div>
 		</div>
-	);
-};
+		<div
+			className={cn("text-[8px] font-medium", {
+				"text-purple-300": currentFramework === "qwik",
+				"text-sky-300": currentFramework === "safari",
+				"text-yellow-300": currentFramework === "chrome",
+				"text-teal-300": currentFramework === "tailwind",
+				"text-blue-300": currentFramework === "react",
+				"text-green-300": currentFramework === "vue",
+				"text-orange-400": currentFramework === "svelte",
+				"text-red-300": currentFramework === "mobile",
+				"text-neutral-300": currentFramework === "desktop",
+			})}
+		>
+			{label}
+		</div>
+	</div>
+);
